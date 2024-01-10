@@ -136,7 +136,7 @@ function createEnemy(locationId, enemyId, parentDiv){
 	var enemyImg = document.createElement('img');
 	enemyImg.className = "location-enemies-img";
 	
-	enemyImg.src = './img/enemies/' + FF6.LOCATION[locationId].Enemies[enemyId] + '.webp';
+	enemyImg.src = './img/enemies/' + FF6.LOCATION[locationId].Enemies[enemyId] + '.png';
 	
 	var enemyText = document.createElement('span');
 	enemyText.className = "location-enemies-text";
