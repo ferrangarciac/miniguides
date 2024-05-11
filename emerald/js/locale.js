@@ -22,6 +22,7 @@ const LANG_EN={
 			"Route 109",										//19
 			"Slateport City",									//20
 			"Route 110",										//21
+			"Mauville City",									//22
 		],                                                      
 	//ENEMIES: [],
 	ITEMS: [
@@ -470,6 +471,7 @@ const LANG_EN={
 			"Woman"		,										//61
 			"Attendant",										//62
 		],
+	MENU: ["Items by Location", "Item List", "Dialy Events"],
 }
 
 LANG_EN.ADVICES = [
@@ -496,15 +498,25 @@ LANG_EN.ADVICES = [
 	but if you have the option of transfer them from another game, you can \
 	keep " + LANG_EN.ITEMS[278] + ".",															//11
 	LANG_EN.ITEMS[23] + " is the reward for completing the Battle Tent.",						//12
+	"You can explore a new labyrinth in the Trick House for every badge you earn, \
+	starting from the second. And you'll access one last labyrinth when you reach the \
+	Battle Tower.",																				//13
+	"You can get " + LANG_EN.ITEMS[110] + " after completing Puzzle 8.",						//14
+	"You can get " + LANG_EN.ITEMS[271] + "after earning the Balance Badge and agreeing \
+	to help shut down New Mauville's generator.",												//15
+	"You can get " + LANG_EN.ITEMS[312] + " after shutting off New Mauville's generator.",		//16
+	"The next items can be exchanged at the casino.",											//17
 	
 ];
 
 const LANG_ES={
-	LOCATION: ["Villa Raíz", "Ruta 101", "Pueblo Escaso", "Ruta 103", "Ruta 102","Ciudad Petalia", "Ruta 104 (Sur)", "Bosque Petalia", "Ruta 104 (Norte)","Ciudad Férrica","Ruta 116","Túnel Fervergal","Ruta 105","Ruta 106","Pueblo Azuliza","Cueva Granito","Ruta 107", "Ruta 108","Barco Abandonado","Ruta 109","Ciudad Portual","Ruta 110"],
+	LOCATION: ["Villa Raíz", "Ruta 101", "Pueblo Escaso", "Ruta 103", "Ruta 102","Ciudad Petalia", "Ruta 104 (Sur)", "Bosque Petalia", "Ruta 104 (Norte)","Ciudad Férrica","Ruta 116","Túnel Fervergal","Ruta 105","Ruta 106","Pueblo Azuliza","Cueva Granito","Ruta 107", "Ruta 108","Barco Abandonado","Ruta 109","Ciudad Portual","Ruta 110","Ciudad Malvalona"],
 	//ENEMIES: [],
 	ITEMS: ["Ningún", "Master Ball", "Ultra Ball", "Super Ball", "Poké Ball", "Safari Ball", "Malla Ball", "Buceo Ball", "Nido Ball", "Acopio Ball", "Turno Ball", "Lujo Ball", "Honor Ball", "Poción", "Antídoto", "Antiquemar", "Antihielo", "Despertar", "Antiparalizador", "Restaurar Todo", "Poción Máxima", "Hiperpoción", "Superpoción", "Cura Total", "Revivir", "Revivir Máximo", "Agua Fresca", "Refresco", "Limonada", "Leche Mu-mu", "Polvo Energía", "Raíz Energía", "Polvo Curación", "Hierba Revivir", "Éter", "Éter Máximo", "Elixir", "Elixir Máximo", "Galleta Lava", "Flauta Azul", "Flauta Amarilla", "Flauta Roja", "Flauta Negra", "Flauta Blanca", "Zumo de Baya", "Ceniza Sagrada", "Sal Cardumen", "Concha Cardumen", "Parte Roja", "Parte Azul", "Parte Amarilla", "Parte Verde", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "Más PS", "Proteína", "Hierro", "Carburante", "Calcio", "Caramelo Raro", "Más PP", "Zinc", "PP Máximos", "???", "Protec. Especial", "Directo", "Ataque X", "Defensa X", "Velocidad X", "Precisión X", "Especial X", "Poké Muñeco", "Cola Skitty", "???", "Superrepelente", "Repelente Máximo", "Cuerda Huida", "Repelente", "???", "???", "???", "???", "???", "???", "Piedra Solar", "Piedra Lunar", "Piedra Fuego", "Piedra Trueno", "Piedra Agua", "Piedra Hoja", "???", "???", "???", "???", "Mini Seta", "Seta Grande", "???", "Perla", "Perla Grande", "Polvoestelar", "Trozo Estrella", "Pepita", "Escama Corazón", "???", "???", "???", "???", "???", "???", "???", "???", "???", "Carta Naranja", "Carta Puerto", "Carta Brillo", "Carta Imán", "Carta Madera", "Carta Ola", "Carta Imagen", "Carta Sombra", "Carta Tropical", "Carta Sueño", "Carta Fabulosa", "Carta Retro", "Baya Zreza", "Baya Atania", "Baya Meloc", "Baya Safre", "Baya Perasi", "Baya Zanama", "Baya Aranja", "Baya Caquic", "Baya Ziuela", "Baya Zidra", "Baya Higog", "Baya Wiki", "Baya Ango", "Baya Guaya", "Baya Pabaya", "Baya Frambu", "Baya Oram", "Baya Latano", "Baya Peragu", "Baya Pinia", "Baya Grana", "Baya Algama", "Baya Ispero", "Baya Meluce", "Baya Uvav", "Baya Tamate", "Baya Mais", "Baya Aostan", "Baya Rautan", "Baya Monli", "Baya Wikano", "Baya Plama", "Baya Sambia", "Baya Rudion", "Baya Andano", "Baya Lichi", "Baya Gonlan", "Baya Aslac", "Baya Yapati", "Baya Aricoc", "Baya Zonlan", "Baya Arabol", "Baya Enigma", "???", "???", "???", "Polvo Brillo", "Hierba Blanca", "Brazal Firme", "Repartir Exp", "Garra Rápida", "Campana Alivio", "Hierba Mental", "Cinta Elegida", "Roca del Rey", "Polvo Plata", "Moneda Amuleto", "Amuleto", "Rocío Bondad", "Diente Marino", "Escama Marina", "Bola Humo", "Piedra Eterna", "Cinta Focus", "Huevo Suerte", "Periscopio", "Revest. Metálico", "Restos", "Escamadragón", "Bolaluminosa", "Arena Fina", "Piedra Dura", "Semilla Milagro", "Gafas de Sol", "Cinturón Negro", "Imán", "Agua Mística", "Pico Afilado", "Flecha Venenosa", "Antiderretir", "Hechizo", "Cuchara Torcida", "Carbón", "Colmillo Dragón", "Pañuelo Seda", "Mejora", "Campana Concha", "Incienso Marino", "Incienso Suave", "Puño Suerte", "Polvo Metálico", "Hueso Grueso", "Palo", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "???", "Pañuelo Rojo", "Pañuelo Azul", "Pañuelo Rosa", "Pañuelo Verde", "Pañuelo Amarillo", "Bici carrera", "Monedero", "Buscaobjetos", "Caña Vieja", "Caña Buena", "Supercaña", "Ticket Barco", "Pase Concurso", "???", "Cubo Wailmer", "Piezas Devon", "Saco hollín", "Llave sótano", "Bici acrobática", "Tubo pokécubos", "Carta", "Ticket eón", "Esfera roja", "Esfera azul", "Escáner", "Gafas aislantes", "Meteorito", "Llave cabina 1", "Llave cabina 2", "Llave cabina 4", "Llave cabina 6", "Llave almacén", "Fósil raíz", "Fósil garra", "Detector Devon", "MT01", "MT02", "MT03", "MT04", "MT05", "MT06", "MT07", "MT08", "MT09", "MT10", "MT11", "MT12", "MT13", "MT14", "MT15", "MT16", "MT17", "MT18", "MT19", "MT20", "MT21", "MT22", "MT23", "MT24", "MT25", "MT26", "MT27", "MT28", "MT29", "MT30", "MT31", "MT32", "MT33", "MT34", "MT35", "MT36", "MT37", "MT38", "MT39", "MT40", "MT41", "MT42", "MT43", "MT44", "MT45", "MT46", "MT47", "MT48", "MT49", "MT50", "MO01", "MO02", "MO03", "MO04", "MO05", "MO06", "MO07", "MO08", "???", "???", "Correo Oak", "Poké flauta", "Llave secreta", "Bono bici", "Dientes oro", "Ámbar viejo", "Llave magnética", "Llave ascensor", "Fósil hélix", "Fósil domo", "Scope Silph", "Bicicleta", "Mapa", "Buscapelea", "Memorín", "Tubo MT/MO", "Saco bayas", "Poké Tele", "Tri-Ticket", "Iris-Ticket", "Té", "Misti-Ticket", "Ori-Ticket", "Bote polvos", "Rubí", "Zafiro", "Signo Magma", "Mapa viejo", "Cubo Wailmer"],
-	TYPEENTRY: ["Cofre", "Robar", "Consejo", "Comprar", "PNJ", "Zahorí"],
+	TYPEENTRY: ["Campo", "Robar", "Consejo", "Comprar", "PNJ", "Zahorí"],
 	NPC: ["Bruno/Aura", "Norman", "Mamá", "Empleado de la Tienda", "Padre de Blasco", "Chica (floristería)", "Chico (frete floristería)", "Chica (frete floristería)", "Empleado Devon", "Niño Ninja (Edif. 2ª planta)", "Cortador (Casa del Cortador)", "Profesor (escuela)", "Esbirro Equipo Magma/Aqua", "Wanda's Boyfriend", "Coleccionista", "Pescador", "Entrenador Guay", "Montañero", "Máximo", "Niña", "Propietario (recompensa por derrotarlos a todos)", "Mujer (Club de Fans Pokemon)", "Presidente (Club de Fans Pokemon)", "Capitán Babor", "Marinero", "Niña", "Mujer", "Rock Smash Dude", "Anacleto", "Erico", "Recompensa derrotando a la Familia Estratega", "Glass Workshop Boss", "Profesor Ícaro Cozmo", "Hermano Fósil Maníaco", "Caballero", "Mujer (Auditorio)", "Recepcionista (Auditorio)", "Anciano (Herbolario)", "Anciana", "Hombre", "Caballero (una vez por día)", "Cazaobjetos (cambiando por Partes)", "Chico", "Karateka", "Dulcinea (una vez por día)", "Chico", "Chica (una vez por día)", "Anciano", "Male", "Pokémon Regalo/Intercambio Interno", "Bella (una vez por día)", "Chica", "Anciana", "Bayólogo (una vez por día)", "Mujer del Bayólogo (una vez por día)", "Mujer del Bayólogo (una vez por día al fallar)", "Pescador/Montañero (repetible)","Sr. Peñas", "Petra","Chica Baya Aleatoria (una vez por día)","Marcial","Mujer","Dependiente"],
+	MENU: ["Objetos por Localización", "Lista de Objetos", "Eventos Diarios"],
+	NONLOCITEMGET: ["Comprar en tienda de Ciudad Férrica", "Varias tiendas", "Máquinas Expendedoras", "Máquinas Expendedoras", "Intercambio", "Herbolario de Pueblo Lavacalda", "Herbolario de Pueblo Lavacalda", "Herbolario de Pueblo Lavacalda", "Herbolario de Pueblo Lavacalda", "Pueblo Lavacalda", "Taller de Vidrio, Ruta 113", "Taller de Vidrio, Ruta 113", "Taller de Vidrio, Ruta 113", "Taller de Vidrio, Ruta 113", "Taller de Vidrio, Ruta 113", "Intercambio", "Recompensa - Casa Treta", "Intercambio", "Tienda de Pueblo Verdegal", "Intercambio", "Intercambio", "Intercambio", "Intercambio", "Evento", "Evento", "Evento", "Evento", "Evento", "Torre Batalla", "Lotería - Centro Comercial de Calagua", "Torre Batalla", "Equipado en el Bicho Maníaco, Ruta 120", "Equipado en Latios/Latias", "Equipado en Koffing salvaje (5% ratio)", "Intercambio", "Torre Batalla", "Equipado en Magnemite y Magneton salvajes (5% ratio)", "Equipado en Horsea y Bagon salvajes (5% ratio)", "Equipado en Pikachu salvaje (5% ratio)", "Equipado en Aron salvaje (5% ratio)", "???", "Casa Treta", "Equipado en Castform de regalo", "Equipado en Doduo y Dodrio salvajes (5% ratio)", "Equipado en Cacnea y Roselia salvajes (5% ratio)", "Equipado en Dusclops, Shuppet, y Banette salvajes (5% ratio)", "Equipado en Abra (5% ratio)", "???", "Intercambio", "Intercambio", "Intercambio", "Intercambio", "Intercambio", "Entregado por Mr. Stone después de recuperar las Piezas Devon", "Evento", "Tras derrotar a Plubio", "Tras derrotar a Vito y Leti", "Tras derrotar a Marcial", "Casa Treta", "Centro Comercial de Calagua", "Centro Comercial de Calagua", "Centro Comercial de Calagua", "Centro Comercial de Calagua", "Centro Comercial de Calagua", "Centro Comercial de Calagua", "Centro Comercial de Calagua", "Entregado tras derrotar a Erico", "Casino de Malvalona", "Centro Comercial de Calagua", "Entregado tras derrotar a Petra", "Entregado tras derrotar a Alana", "Entregado tras derrotar a Norman", "Entregado tras derrotar a Candela", "Mapa Mundi"],
 }
 
 LANG_ES.ADVICES = [
@@ -530,6 +542,14 @@ LANG_ES.ADVICES = [
 	"Tendrás que elegir entre el " + LANG_ES.ITEMS[192] + " y la " + LANG_ES.ITEMS[193] + ",\
 	pero si tienes la opción de transferirlos desde otro juego, podrás quedarte con \
 	el " + LANG_ES.ITEMS[278] + ".",															//11
-	"Conseguirás " + LANG_ES.ITEMS[23] + " si completas la Tienda de Batalla.",				//12
+	"Conseguirás " + LANG_ES.ITEMS[23] + " si completas la Tienda de Batalla.",					//12
+	"En la Casa Treta podrás hacer un nuevo laberinto, por cada medalla que ganes, \
+	a partir de la segunda. Y un último laberinto cuando accedas a la Torre Batalla.",			//13
+	"Podrás conseguir " + LANG_ES.ITEMS[110] + "cuando hayas superado todos los laberintos.",	//14
+	"Recibirás " + LANG_ES.ITEMS[271] + " de Erico tras derrotar a Norman y \
+	aceptar la misión de apagar el generador de Malvalanova.",									//15
+	"Cuando termines la misión de apagar el generador de Malvalanova, Erico te\
+	recompensará con "  + LANG_ES.ITEMS[312] + ".",												//16
+	"Los siguientes objetos se pueden canjear en el casino.",									//17
 
 ];

@@ -177,6 +177,76 @@ function createEnemy(locationId, enemyId, parentDiv){
 }
 */
 
+function createItemAll(locationId, itemId, itemCount, typeEntry, parentDiv){
+	var itemIndividualDiv  = document.createElement('div');
+	itemIndividualDiv.className = "location-item-individual-div";
+	
+	var typeDiv = document.createElement('div');
+	typeDiv.className = "location-type-div";
+	
+	var typeImgDiv = document.createElement('div');
+	typeImgDiv.className = "location-type-img-div";
+	
+	var typeImg = document.createElement('img');
+	typeImg.className = "location-type-img";
+	
+	//ICONOS INDIVIDUALES DE OBJETOS
+	typeImg.src = './img/items/' + itemId + '.png';
+		
+	
+	var typeNameDiv = document.createElement('div');
+	typeNameDiv.className = "location-type-name-div";
+	
+	var typeName = document.createElement('span');
+	typeName.className = "location-type-name";
+	typeName.innerHTML = language.TYPEENTRY[typeEntry];
+	
+	var itemTextDiv = document.createElement('div');
+	itemTextDiv.className = "location-item-text-div";
+	
+	var itemText = document.createElement('span');
+	itemText.className = "";
+	
+	itemText.innerHTML = language.ITEMS[itemId];
+	
+	var getDiv = document.createElement('div');
+	getDiv.className = "item-get-div";
+	
+	var get = document.createElement('img');
+	get.className = "get0";
+	get.setAttribute("src", './img/get.png');
+	
+	
+	get.num = i;
+	get.localVariable = "DB_item_all";
+	get.status = localStorage.getItem("DB_item_all_" + i);
+	get.addEventListener('click', getItem, false);			
+	
+	if(get.status=="1"){
+		get.className = "get1";
+	}else{
+		get.className = "get0";
+	}
+	
+	getDiv.appendChild(get);
+	
+	typeImgDiv.appendChild(typeImg);
+	typeNameDiv.appendChild(typeName);	
+	typeDiv.appendChild(typeImgDiv);
+	typeDiv.appendChild(typeNameDiv);
+	
+	itemTextDiv.appendChild(itemText);
+	
+	itemIndividualDiv.appendChild(typeDiv);
+	itemIndividualDiv.appendChild(itemTextDiv);
+	
+	if(typeEntry == 0 || typeEntry == 1 || typeEntry == 3 || typeEntry == 4 || typeEntry == 5){
+		itemIndividualDiv.appendChild(getDiv);
+	}
+		
+	parentDiv.appendChild(itemIndividualDiv);
+}
+
 function createItem(locationId, itemId, itemCount, typeEntry, parentDiv){ //typeEntry: 0=map item, 1=steal, 2=advices, 3=Buy, 4=NPC Item, 5=Hidden item
 	var itemIndividualDiv  = document.createElement('div');
 	itemIndividualDiv.className = "location-item-individual-div";
@@ -227,24 +297,32 @@ function createItem(locationId, itemId, itemCount, typeEntry, parentDiv){ //type
 	var itemText = document.createElement('span');
 	itemText.className = "";
 	
+	var itemIndex;
+	
+	
 	switch(typeEntry){
 		case 0:
 			itemText.innerHTML = language.ITEMS[DB.LOCATION[locationId].Items[itemId]];
+			itemIndex = DB.LOCATION[locationId].Items[itemId];
 			break;
 		case 1:
 			itemText.innerHTML = language.ITEMS[DB.LOCATION[locationId].Steal[itemId]] + ' <img src="./img/typeimages/leftarrow.png"></img> ' + language.ENEMIES[DB.LOCATION[locationId].EnemyStolen[itemId]];
+			itemIndex = DB.LOCATION[locationId].Steal[itemId];
 			break;			
 		case 2:
 			itemText.innerHTML = language.ADVICES[DB.LOCATION[locationId].Advice[itemId]];
 			break;	
 		case 3:
 			itemText.innerHTML = language.ITEMS[DB.LOCATION[locationId].Buy[itemId]] + " x" + DB.LOCATION[locationId].BuyAmount[itemId];
+			itemIndex = DB.LOCATION[locationId].Buy[itemId];
 			break;
 		case 4:
 			itemText.innerHTML = language.ITEMS[DB.LOCATION[locationId].NPCItems[itemId]];
+			itemIndex = DB.LOCATION[locationId].NPCItems[itemId];
 			break;
 		case 5:
 			itemText.innerHTML = language.ITEMS[DB.LOCATION[locationId].Hidden[itemId]];
+			itemIndex = DB.LOCATION[locationId].Hidden[itemId];
 			break;
 	}
 	
@@ -257,6 +335,7 @@ function createItem(locationId, itemId, itemCount, typeEntry, parentDiv){ //type
 	
 	if(typeEntry == 0 || typeEntry == 1 || typeEntry == 3 || typeEntry == 4 || typeEntry == 5){
 		get.num = itemCount;
+		get.itemIndex = itemIndex;
 		get.localVariable = "DB_item";
 		get.status = localStorage.getItem("DB_item_" + itemCount);
 		get.addEventListener('click', getItem, false);			
@@ -408,6 +487,11 @@ function getItem(evt){
 		localStorage.setItem(this.localVariable + "_" + this.num, 1);
 	}
 	
+	if(this.localVariable == "DB_item"){
+		localStorage.setItem("DB_item_all_" + this.itemIndex, 1);
+		console.log(localStorage.getItem("DB_item_all_" + this.itemIndex));
+	}
+	
 	this.status = !this.status;
 }
 
@@ -419,6 +503,74 @@ function getMousePosition(canvas, event) {
     console.log(x + ", " + y); 
 	//console.log("Items: " + (x-16) + ", " + (y-16)); 
 	//console.log("NPCs: " + (x-10) + ", " + (y-16)); 
+}
+
+function showAllItems(){
+	var content = document.getElementById('content');
+	content.innerHTML = "";
+	
+	var itemGlobalDiv = document.createElement('div');
+		itemGlobalDiv.className = "location-item-global-div";
+		
+		for(i=0;i<language.ITEMS.length;i++){
+			createItemAll(0,i,i,0,itemGlobalDiv);
+		}
+		
+	content.appendChild(itemGlobalDiv);
+}
+
+function createMenu(){
+	var menu = document.getElementById('menu');
+	menu.innerHTML="";
+	
+	//HEADER (menu)
+	var menuHeaderDiv = document.createElement('div');
+	menuHeaderDiv.className = "menu-header-div";
+	
+	//ITEMS BY LOCATION
+	
+	var optionDivLoc = document.createElement('div');
+	optionDivLoc.className = "menu-option-div";
+	
+	optionDivLoc.addEventListener('click', fillLocations, false);
+	
+	var optionTextLoc = document.createElement('span');
+	optionTextLoc.className = "menu-option-text";
+	
+	optionTextLoc.innerHTML = language.MENU[0];
+		
+	optionDivLoc.appendChild(optionTextLoc);
+	menuHeaderDiv.appendChild(optionDivLoc);
+	
+	//ITEMS BY ITEM
+	
+	var optionDivItem = document.createElement('div');
+	optionDivItem.className = "menu-option-div";
+	
+	optionDivItem.addEventListener('click', showAllItems, false);
+	
+	var optionTextItem = document.createElement('span');
+	optionTextItem.className = "menu-option-text";
+	
+	optionTextItem.innerHTML = language.MENU[1];
+		
+	optionDivItem.appendChild(optionTextItem);
+	menuHeaderDiv.appendChild(optionDivItem);
+	
+	//ITEMS BY DIALY
+	
+	var optionDivDialy = document.createElement('div');
+	optionDivDialy.className = "menu-option-div";
+	
+	var optionTextDialy = document.createElement('span');
+	optionTextDialy.className = "menu-option-text";
+	
+	optionTextDialy.innerHTML = language.MENU[1];
+		
+	optionDivDialy.appendChild(optionTextDialy);
+	menuHeaderDiv.appendChild(optionDivDialy);
+		
+	menu.appendChild(menuHeaderDiv);
 }
 
 window.onload = function(){
@@ -449,6 +601,6 @@ window.onload = function(){
 			fillLocations();
 		}, false);
 	changeLanguage("es");
-	//createMenu();
+	createMenu();
 	fillLocations();
 }
