@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300);
+
+header{
+	margin: 0 auto;
+	font: 15px 'Lato', sans-serif;
+	font-size: 100%;
+	font-weight: 600;
+	color: #FFFFFF;
+	border-bottom: 5px solid #ff5556;
+}
+
+#appName{
+	display: inline-block;
+	vertical-align: middle;
+	padding: 7px;
+	padding-left: 7px;
+}
+
+#languaje{
+	float: right;
+	padding: 5px;
+}
+
+#wrapper, header{
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.lang{
+	display: inline-block;
+	vertical-align: middle;
+	padding:3px;
+	font-size: 75%;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: #504d6f;
+}
+
+#banner{
+	margin: 0 auto;
+}
+
+#banner img{
+	max-width: 100%;
+}
+
+body{
+	background-color: #38364e;
+	margin:0;
+	font:15px 'Open Sans',sans-serif;
+	cursor:default;
+	line-height:1.8;
+	-moz-user-select:none;
+	-webkit-user-select: none;
+	-ms-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+}
+
+/* -- CONTENT --*/
+
+#content{
+	margin: 0 auto;
+	font: 15px 'Lato', sans-serif;
+	font-size: 100%;
+	font-weight: 600;
+	color: #FFFFFF;
+}
+
+.option-div{
+	padding: 0.5%;
+	font: 12px 'Lato', sans-serif;
+	color: #FFFFFF;
+	display: inline-block;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	width: 32.33%;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #201e32;
+}
+
+.section-header{
+	background: #f0f;
+	background-image: url("../img/common/backsection.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.section-name{
+  background: #f0f;
+	font: 15px 'Lato', sans-serif;
+	font-size: 100%;
+	font-weight: 600;
+	color: #FFFFFF;
+	background-image: url("../img/common/backsection.jpg");
+	background-size: contain;
+	background-position: center center;
+	border-top: 2px solid #0d261a;
+	border-bottom: 2px solid #0d261a;
+	padding: 4px;	
+	text-align: center;
+}
+
+.hidden{
+	display: none;
+}
+
+/* LINKS */
+
+.link-div{
+	background-color: rgba(255, 255, 255, 0.3);
+	text-decoration: none;
+	
+}
+
+/* ENEMIES */
+
+.location-enemies-individual-div{
+	display: inline-block;
+	width: 8%;
+	height: 100px;
+	border: 1px solid #38364e;
+	border-radius: 5px 5px 5px 5px;
+	vertical-align: top;
+	padding: 1.3%;
+}
+
+.location-enemies-img-div{
+	height: 65%;
+}
+
+.location-enemies-img{
+	max-width: 100%;	
+}
+
+.location-enemies-text-div{
+	border-top: 1px solid #909090;
+	text-align: center;
+}
+
+.location-enemies-text-div span{
+	font-size: 60%;
+	font-weight: 400;
+}
+
+/* ITEM LIST */
+
+.item-list{
+	display: block;
+	font: 15px 'Lato', sans-serif;
+	font-size: 100%;
+	color: #FFFFFF;
+	padding: 10px;	
+}
+
+.item-list:nth-child(odd){
+	background-color:#302e42;
+}
+
+.item-list:hover{
+	background-color: #504d6f;
+}
+
+.item-image-DIV{
+	display: inline-block;
+	width: 10%;;
+	vertical-align: middle;
+}
+
+.item-name{
+	display: inline-block;
+	width: 40%;
+	vertical-align: middle;
+}
+
+.type-name-div{
+	border-top: 1px solid #909090;
+	font-size: 60%;
+}
+
+.type-item-div{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	width: 20%;
+}
+
+.achievement-div{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+	width: 75%;	
+}
+
+.advice-name{
+	display: inline-block;
+	width: 75%;
+	vertical-align: middle;
+	padding-left: 15px;
+	font-size: 80%;
+}
+
+.type-advice-div{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	width: 10%;
+}
+
+.missable-container{
+	position: absolute;
+	margin-left: 49px;
+	margin-top: -5px;
+}
+
+.missable-text{
+	font-size: 70%;
+}
+
+/* MAPS */
+
+.location-map-div, .link-div{
+	font: 15px 'Lato', sans-serif;
+	font-size: 100%;
+	color: #FFFFFF;
+	text-align: center;
+	border-bottom: 2px solid #0d261a;
+	background-color: #38364e;
+}
+
+.location-map-icon-div{
+	display: inline-block;
+}
+
+.location-map-div div{
+  padding: 5px;
+}
+
+.map-img-div{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color:rgba(0, 0, 0, 0.5);
+}
+
+.map-img-container{	
+	overflow: auto;
+	max-width: 100%;
+	max-height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.map-img{
+	border: 2px solid #909090;
+	border-radius: 10px;	
+}
+
+/* LINKS */
+
+.link-div{
+	background-color: rgba(255, 255, 255, 0.3);
+	text-decoration: none;
+	
+}
+
+/* ITEM GET ICON */
+
+.item-get{
+	display: inline-block;
+	vertical-align: middle;
+	width: 10%;
+	padding-left: 170px;
+}
+
+.item-get-div{
+	padding-left: 20%;
+}
+
+.get0{
+	opacity: 30%;
+}
+
+.get1{
+	opacity: 80%;
+}
+
+/* FOOTER */
+
+footer{
+	text-align:center;
+	color:#767b86;
+	font-size:85%;
+}
+footer a{
+	color:#969ba6;
+	text-decoration:none;
+	border-bottom:1px solid #464b56;
+}
+footer a:hover{
+	color:white;
+	border-color:#41d5ff;
+}
+
+hr{border:none;border-top:1px dotted #bbb;margin:15px 0}
+
+footer .icon, #crc32.valid:after{
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAQCAYAAABQrvyxAAACUElEQVRIx9XWzUtUURzG8atp04svtCiI3v6EQFIoInBREFgEQtC+VVCLWoQLMTKqRUEbU4uKaOht5a7IoDcoWkiLIKKVgqUUvkGMM2revid+V55u5+qdS5ANfEDvPXN4npl7zpkgDMMgpgFX8QEF8xG9aPKM/6f0n7W4ifkw+eXu5VG33Aq48G/C9K8B1EeTjLTsdrbjMQqYwn1sw2bkMYlp9GOHe89CiDNBuU5jAOujSe5KsFY8wVe8NaN4hsN4bWP7pIAL9B1hzGcMe667IjszFuhAaN65CfbIJ5tP8bVdl/F7rcBzT8ilvMxQ4JyEd9rdBHck0JUUBc7L+HtWoJShwEyswCasSghegUux8G2/7jHBoCzQDSkKuGd/1t4zZAVGMhQYlQLNmEA/1sTCV6JHgs/jxMJ9JihamEIZq3/M3lO0AmczFLggBYYloCuxWj753lj4Y78VZIJxeSQ2pgi/Dj9s/IQVqEZfGeEfIScFGjAmQZ+iDjfk2hyO/vF4McELKdCZokCbjH8l26gr8TBFeFc059lGXYlxCVyUv2dxxLs+mOC4hXkPt7AuYqsn+BYrOCcFTkkBpwq3Fwn/wIoGCedAIyZji3UGrYk7kx1ig1agXQLul/DNnsPsS3QiSwGnEt2e8LewQscmbKNN8k2UcGjRrdUm2YVp9OAgTqJKCuRi4UtWKvAUcCpwWcJ3WbEgRYHocRpCy5Jng4TcZ4vyk522NXJvpYSfwgF9vDwFIp1ut0m6/7d/zAW2C3XhG2rlerVdu2ZrYVn+Gv0v/QQllGUdmIg+uwAAAABJRU5ErkJggg==');	
+}
+footer .icon{
+	background-position:0px 0px;
+	display:inline-block;
+	vertical-align:middle;
+	width:16px;height:16px
+}
+footer .icon.heart{background-position:-16px 0px}
+footer .icon.check{background-position:-32px 0px}
+
+/* RESPONSIVE DESIGN */
+@media only screen and (max-width:641px){
+	body{
+		font-size:14px;
+		margin:0 auto
+	}
+	
+	header{
+	 width: 100%;
+	}
+	
+	
+}
