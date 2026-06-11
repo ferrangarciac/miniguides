@@ -54,22 +54,23 @@ LOCATION:	Esta será la base de datos de cada zona del juego, teniendo varias op
 				Si en la opción "missable" ponemos true, aparecerá una señal en la guía que
 				nos indicará que ese objeto es perdible. Funciona del mismo modo en todas las
 				demás opciones que cuenten con "missable".
-- item_npc:	[item id, npc id, map, x, y, missable]
+- item_npc:	[item id, npc id, x, y, missable, text]
 			En esta opción indicaremos los objetos entregados por PNJs.
-- item_buy: [item id, quantity, missable]
+- item_buy: [item id, quantity, missable, text]
 			En esta opción añadiremos esos objetos que podemos comprar en tiendas y que es
 			necesario adquirirlos.
 			En "quantity" añadiremos entre comillas la cantidad que tenemos que comprar.
 			Ejemplo: "x5" (se pueden dejar las comillas vacías para no poner ninguna cantidad).
-- item_steal:	[item id, monster id, missable]
+- item_steal:	[item id, monster id, missable, text]
 				Objetos que debemos robar a ciertos monstruos.
-- item_drop:	[item id, monster id, missable]				
+- item_drop:	[item id, monster id, missable,text]				
 				Objetos que dejarán caer ciertos monstruos.
-- money_field:	[money, map, x, y]
+- item_special: []
+- money_field:	[money, x, y, text]
 				Dinero que podremos recoger en el mapa.
 				Funciona igual que "item_field", pero en lugar de poner el id del objeto,
 				añadiremos la cantidad de dinero recibido.
-- money_npc:	[money, npc id, map, x, y]
+- money_npc:	[money, npc id, x, y, text]
 				Dinero que recibiremos de un PNJ.
 				Funciona igual que "item_npc", pero en lugar de poner el id del objeto,
 				añadiremos la cantidad de dinero recibido.
@@ -84,11 +85,12 @@ LOCATION:	Esta será la base de datos de cada zona del juego, teniendo varias op
 					2: item_buy
 					3: item_steal
 					4: item_drop
-					5: money_field
-					6: money_npc
-					7: achievement
-					8: advice
-				Ejemplo:	entry_order: [0,0,8,3,0]
+					5: item_special
+					6: money_field
+					7: money_npc
+					8: achievement
+					9: advice
+				Ejemplo:	entry_order: [0,0,9,3,0]
 							En este ejemplo le hemos indicado que aparezcan entradas en el siguiente orden:
 								- Primer objeto para recoger en el mapa (item_field)
 								- Segundo objeto para recoger en el mapa (item_field)
